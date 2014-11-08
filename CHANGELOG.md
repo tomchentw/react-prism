@@ -1,3 +1,11 @@
+## 1.2.0 (2014-11-09)
+
+
+#### Features
+
+* **PrismCode:** should respond to children update ([a85082d6](https://github.com/tomchentw/react-prism/commit/a85082d631aa12d66fabfdeda926efe5d3bf94e3))
+
+
 ## 1.1.0 (2014-11-08)
 
 
