@@ -5,6 +5,8 @@ var React = require("react/addons"),
 module.exports = React.createClass({
   displayName: "PrismCode",
 
+  mixins: [React.addons.PureRenderMixin],
+
   propTypes: {
     async: React.PropTypes.bool
   },
@@ -15,45 +17,23 @@ module.exports = React.createClass({
     };
   },
 
-  getInitialState () {
-    return {
-      _hightlighted: null
-    };
+  componentDidMount () {
+    this._hightlight();
   },
 
-  componentDidMount () {
-    // https://github.com/LeaVerou/prism/issues/392
-    var {_hightlight_element} = this;
-    if (this.props.async) {
-      setTimeout(_hightlight_element);
-    } else {
-      _hightlight_element();
-    }
+  componentDidUpdate () {
+    this._hightlight();
+  },
+
+  _hightlight () {
+    Prism.highlightElement(this.refs.code.getDOMNode(), this.props.async);
   },
 
   render () {
     return this._render(this.props, this.state);
   },
 
-  _hightlight_element () {
-    // https://github.com/LeaVerou/prism/issues/392
-    Prism.highlightElement(this.refs.code.getDOMNode(), this.props.async, this._on_hightlighted);
-  },
-
-  _on_hightlighted (__html) {
-    this.setState({_hightlighted: {__html}});
-  },
-
-  _render (props, {_hightlighted}) {
-    var newProps = {
-      ref: "code",
-      className: props.className,
-    }, {children} = props;
-
-    if (_hightlighted) {
-      newProps.dangerouslySetInnerHTML = _hightlighted;
-      children = null;
-    }
-    return <code {...newProps}>{children}</code>;
+  _render (props, state) {
+    return <code ref="code" className={props.className}>{props.children}</code>;
   }
 });
