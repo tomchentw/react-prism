@@ -64,6 +64,7 @@
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/test/__preprocessor__.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/test/__framework__.js",
     "testPathDirs": [
       "<rootDir>/src"
     ],
@@ -72,7 +73,8 @@
       "<rootDir>/node_modules/"
     ],
     "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
+      "<rootDir>/node_modules/react",
+      "<rootDir>/bower_components/prism"
     ]
   }
 }
