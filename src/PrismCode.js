@@ -5,6 +5,16 @@ var React = require("react/addons"),
 module.exports = React.createClass({
   displayName: "PrismCode",
 
+  propTypes: {
+    async: React.PropTypes.bool
+  },
+
+  getDefaultProps () {
+    return {
+      async: true
+    };
+  },
+
   getInitialState () {
     return {
       _hightlighted: null
@@ -12,7 +22,7 @@ module.exports = React.createClass({
   },
 
   componentDidMount () {
-    Prism.highlightElement(this.refs.code.getDOMNode(), true, this._on_hightlighted);
+    Prism.highlightElement(this.refs.code.getDOMNode(), this.props.async, this._on_hightlighted);
   },
 
   render () {
