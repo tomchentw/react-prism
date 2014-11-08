@@ -8,11 +8,13 @@ describe("PrismCode", function() {
       prismCodeComponent,
       codeDOMNode;
 
-  it("should render original code in the first run", function() {
+  beforeEach(function () {
     React = require("react/addons");
     TestUtils = React.addons.TestUtils;
     PrismCode = require("../PrismCode.js");
-  
+  });
+
+  it("should render original code in the first run", function() {
     prismCodeComponent = TestUtils.renderIntoDocument(
       <PrismCode className="language-javascript">
         require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);
@@ -20,6 +22,22 @@ describe("PrismCode", function() {
     );
     codeDOMNode = prismCodeComponent.getDOMNode();
 
+    expect(setTimeout.mock.calls.length).toBe(1);
     expect(codeDOMNode.textContent).toEqual("require(\"react/addons\").addons.TestUtils.renderIntoDocument(/* wtf ?*/);");
+  });
+
+  it("should render hightlighted code in the second run", function() {
+    prismCodeComponent = TestUtils.renderIntoDocument(
+      <PrismCode className="language-javascript">
+        var React, TestUtils;
+      </PrismCode>
+    );
+
+    expect(setTimeout.mock.calls.length).toBe(1);
+    jest.runAllTimers();
+
+    codeDOMNode = prismCodeComponent.getDOMNode();
+    // FIXME: exact content here
+    expect(codeDOMNode.textContent).not.toEqual("require(\"react/addons\").addons.TestUtils.renderIntoDocument(/* wtf ?*/);");
   });
 });
