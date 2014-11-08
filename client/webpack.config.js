@@ -42,8 +42,8 @@ webpackConfig = module.exports = {
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
     ),
     new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery"
+      $: "jquery",
+      jQuery: "jquery",
     }),
     new HtmlWebpackPlugin({
       template: "./client/index.html",
