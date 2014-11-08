@@ -1,3 +1,11 @@
+## 1.1.0 (2014-11-08)
+
+
+#### Bug Fixes
+
+* **PrismCode:** async option should be truely async ([29d6717d](https://github.com/tomchentw/react-prism/commit/29d6717dc52fc0d430f44af6ca05448fa68642c9))
+
+
 ## 1.0.0 (2014-11-08)
 
 
