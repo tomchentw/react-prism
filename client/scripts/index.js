@@ -35,7 +35,7 @@ Body = React.createClass({
             <small>by creating a component SelfUpdatedCode</small>
           </h2>
           <pre><PrismCode className="language-javascript">
-            {require("raw-loader!./SelfUpdatedCode")}
+            {require("!raw-loader!./SelfUpdatedCode")}
           </PrismCode></pre>
         </div>
       </div>
