@@ -21,20 +21,52 @@ var React = require("react/addons"),
 module.exports = React.createClass({
   displayName: "SelfUpdatedCode",
 
+  propTypes: {
+    intervalMillis: React.PropTypes.number.isRequired
+  },
+
   getInitialState () {
     return {
       _index: 0,
+      _intervalId: null,
     };
   },
 
   componentWillMount () {
-    setInterval(() => {
-      this.setState({_index: (this.state._index + 1) % CODE_LIST_LENGTH});
-    }, 5000);
+    this._setInterval();
+  },
+
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.intervalMillis !== this.props.intervalMillis) {
+      this._clearInterval();
+      this.setState({ _intervalId: null });
+    }
+  },
+
+  componentDidUpdate () {
+    this._setInterval();
+  },
+
+  componentWillUnmount () {
+    this._clearInterval();
   },
 
   render () {
     return this._render(this.props, this.state);
+  },
+
+  _setInterval () {
+    if (this.state._intervalId !== null) {
+      return;
+    }
+    var _intervalId = setInterval(() => {
+      this.setState({_index: (this.state._index + 1) % CODE_LIST_LENGTH});
+    }, this.props.intervalMillis);
+    this.setState({ _intervalId });
+  },
+
+  _clearInterval () {
+    clearInterval(this.state._intervalId);
   },
 
   _render (props, state) {
