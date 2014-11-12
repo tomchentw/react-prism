@@ -13,20 +13,24 @@ var React = require("react/addons"),
 Body = React.createClass({
   displayName: "Body",
 
+  propTypes: {
+    intervalSeconds: React.PropTypes.number.isRequired
+  },
+
   render () {
     return this._render(this.props, this.state);
   },
 
-  _render (props, state) {
+  _render ({intervalSeconds}, state) {
     return <div className="container-fluid container--full-height">
       <div className="row row--full-height">
         <div className="col-xs-6">
           <h2>
             Demo of SelfUpdatedCode
             <br />
-            <small>update every 5 seconds</small>
+            <small>update every {intervalSeconds} seconds</small>
           </h2>
-          <pre><SelfUpdatedCode /></pre>
+          <pre><SelfUpdatedCode intervalMillis={intervalSeconds * 1000} /></pre>
         </div>
         <div className="col-xs-6">
           <h2>
@@ -43,4 +47,4 @@ Body = React.createClass({
   }
 });
 
-bodyComponent = React.render(<Body />, document.getElementById("react-root"));
+bodyComponent = React.render(<Body intervalSeconds={2} />, document.getElementById("react-root"));
