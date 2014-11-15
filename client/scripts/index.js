@@ -1,5 +1,6 @@
 "use strict";
 require("../styles/index.scss");
+require("github-fork-ribbon-css/gh-fork-ribbon.css");
 require("prism/themes/prism.css");
 
 var React = require("react/addons"),
@@ -23,6 +24,11 @@ Body = React.createClass({
 
   _render ({intervalSeconds}, state) {
     return <div className="container-fluid container--full-height">
+      <div className="github-fork-ribbon-wrapper right">
+        <div className="github-fork-ribbon" style={{backgroundColor: "#333"}}>
+          <a href="https://github.com/tomchentw/react-prism">Fork me on GitHub</a>
+        </div>
+      </div>
       <div className="row row--full-height">
         <div className="col-xs-6">
           <h2>
