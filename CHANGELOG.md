@@ -1,3 +1,16 @@
+## 1.3.0 (2015-04-27)
+
+
+#### Bug Fixes
+
+* **webpack.config.js:** node_modules are excluded from js loaders ([2d314148](https://github.com/tomchentw/react-prism/commit/2d31414808c9871dde5648684e9f5ed070ad4e7c))
+
+
+#### Features
+
+* **package.json:** update to react@0.13 and add peerDependencies ([2d758ba8](https://github.com/tomchentw/react-prism/commit/2d758ba810be54bced3342c4ca2ef0a68874e941))
+
+
 ### 1.2.1 (2014-11-20)
 
 
