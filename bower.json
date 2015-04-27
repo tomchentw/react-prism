@@ -19,6 +19,5 @@
     "webpack.config.js"
   ],
   "devDependencies": {
-    "prism": "3e9491d33bb2e8b959f0cd97ebad927285885158"
   }
 }
