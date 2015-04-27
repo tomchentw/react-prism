@@ -31,7 +31,7 @@ webpackConfig = module.exports = {
   module: {
     loaders: [
       { test: require.resolve("react/addons"), loader: "expose-loader?React" },
-      { test: /\.js(x?)$/, loaders: JSX_WITH_HOT_LOEADERS },
+      { test: /\.js(x?)$/, exclude: /node_modules/, loaders: JSX_WITH_HOT_LOEADERS },
       { test: /\.jpg$/, loader: "file-loader" },
       { test: /\.css$/, loader: CSS_LOADER },
       { test: /\.scss$/, loader: SCSS_LOADER },
