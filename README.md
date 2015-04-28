@@ -39,7 +39,7 @@ var {PrismCode} = require("react-prism");
 
 ```shell
 git clone ...
-npm run dev_install
+npm install
 npm run dev
 ```
 
