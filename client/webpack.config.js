@@ -12,7 +12,7 @@ var Path = require("path"),
     CSS_LOADER = "style-loader!css-loader?root=../",
     SCSS_LOADER = CSS_LOADER + "!sass-loader?" + JSON.stringify({
       includePaths: [
-        Path.resolve(__dirname, "../bower_components/bootstrap-sass-official/assets/stylesheets"),
+        Path.resolve(__dirname, "../node_modules/bootstrap-sass/assets/stylesheets"),
       ]
     });
 
@@ -23,14 +23,8 @@ webpackConfig = module.exports = {
     publicPath: "assets/",
     filename: (IS_PRODUCTION ? "[hash].js" : "bundle.js")
   },
-  resolve: {
-    root: [
-      Path.join(__dirname, "../bower_components")
-    ]
-  },
   module: {
     loaders: [
-      { test: require.resolve("react/addons"), loader: "expose-loader?React" },
       { test: /\.js(x?)$/, exclude: /node_modules/, loaders: JSX_WITH_HOT_LOEADERS },
       { test: /\.jpg$/, loader: "file-loader" },
       { test: /\.css$/, loader: CSS_LOADER },
@@ -38,9 +32,6 @@ webpackConfig = module.exports = {
     ]
   },
   plugins: [
-    new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-    ),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",

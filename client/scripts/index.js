@@ -1,7 +1,5 @@
 "use strict";
 require("../styles/index.scss");
-require("github-fork-ribbon-css/gh-fork-ribbon.css");
-require("prism/themes/prism.css");
 
 var React = require("react/addons"),
     {update} = React.addons,

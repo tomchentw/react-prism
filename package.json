@@ -7,9 +7,8 @@
   "scripts": {
     "build": "jsx --harmony ./src ./lib",
     "build_client": "webpack -p --config ./client/webpack.config.js",
-    "test": "jest",
-    "dev_install": "npm install && npm dedupe && bower install",
-    "dev": "webpack --config ./client/webpack.config.js && webpack-dev-server --config ./client/webpack.config.js --inline --hot --content-base ./public"
+    "dev": "webpack --config ./client/webpack.config.js && webpack-dev-server --config ./client/webpack.config.js --inline --hot --content-base ./public",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -43,15 +42,16 @@
   "bugs": {
     "url": "https://github.com/tomchentw/react-prism/issues"
   },
-  "homepage": "https://github.com/tomchentw/react-prism",
+  "homepage": "https://tomchentw.github.io/react-prism/",
   "devDependencies": {
-    "bower": "^1.3.12",
+    "bootstrap-sass": "^3.3.4",
     "css-loader": "^0.9.0",
-    "expose-loader": "^0.5.3",
     "file-loader": "^0.8.1",
+    "github-fork-ribbon-css": "git+https://github.com/tomchentw/github-fork-ribbon-css.git#gh-pages",
     "html-webpack-plugin": "^1.1.0",
-    "jest-cli": "^0.1.18",
+    "jest-cli": "^0.4.0",
     "jsx-loader": "^0.12.1",
+    "prismjs": "git+https://github.com/PrismJS/prism.git#master",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.5",
     "react-tools": "^0.13.2",

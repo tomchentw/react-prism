@@ -5,7 +5,7 @@ var React = require("react/addons"),
     CODE_LIST = [
       {
         className: "language-javascript",
-        codeBlock: require("raw-loader!prism/prism.js"),
+        codeBlock: require("raw-loader!prismjs/prism.js"),
       },
       {
         className: "language-css",
