@@ -80,7 +80,7 @@
     ],
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
-      "<rootDir>/bower_components/prism"
+      "<rootDir>/node_modules/prismjs"
     ]
   }
 }
