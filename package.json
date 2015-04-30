@@ -45,18 +45,19 @@
   "homepage": "https://tomchentw.github.io/react-prism/",
   "devDependencies": {
     "bootstrap-sass": "^3.3.4",
-    "css-loader": "^0.9.0",
+    "css-loader": "^0.12.0",
     "file-loader": "^0.8.1",
     "github-fork-ribbon-css": "git+https://github.com/tomchentw/github-fork-ribbon-css.git#gh-pages",
     "html-webpack-plugin": "^1.1.0",
     "jest-cli": "^0.4.0",
-    "jsx-loader": "^0.12.1",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^2.1.1",
     "prismjs": "git+https://github.com/PrismJS/prism.git#master",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.5",
     "react-tools": "^0.13.2",
-    "sass-loader": "^0.3.0",
-    "style-loader": "^0.8.1",
+    "sass-loader": "^0.6.0",
+    "style-loader": "^0.12.1",
     "tomchentw-npm-dev": "^1.1.0",
     "webpack": "^1.4.7",
     "webpack-dev-server": "^1.6.5"
@@ -79,7 +80,7 @@
     ],
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
-      "<rootDir>/bower_components/prism"
+      "<rootDir>/node_modules/prismjs"
     ]
   }
 }
