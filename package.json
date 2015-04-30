@@ -50,7 +50,7 @@
     "github-fork-ribbon-css": "git+https://github.com/tomchentw/github-fork-ribbon-css.git#gh-pages",
     "html-webpack-plugin": "^1.1.0",
     "jest-cli": "^0.4.0",
-    "jsx-loader": "^0.12.1",
+    "jsx-loader": "^0.13.2",
     "prismjs": "git+https://github.com/PrismJS/prism.git#master",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.5",
