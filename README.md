@@ -4,6 +4,13 @@
 [![Version][npm-image]][npm-url]
 
 
+## Installation
+
+```sh
+npm i --save react-prism
+```
+
+
 ## Demo
 
 Static hosted [demo site][demo] on GitHub.
