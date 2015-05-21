@@ -1,3 +1,11 @@
+### 1.3.1 (2015-05-21)
+
+
+#### Bug Fixes
+
+* **package.json:** test ([f80cef1d](https://github.com/tomchentw/react-prism/commit/f80cef1d9edb659efab3540b834d903e933c6530))
+
+
 ## 1.3.0 (2015-04-27)
 
 
