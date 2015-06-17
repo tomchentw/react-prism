@@ -1,14 +1,11 @@
-"use strict";
-var React = require("react/addons"),
-    {update} = React.addons;
+import {default as React, PropTypes, addons} from "react/addons";
+/* global Prism */
 
-module.exports = React.createClass({
-  displayName: "PrismCode",
-
-  mixins: [React.addons.PureRenderMixin],
+var PrismCode = React.createClass({
+  mixins: [addons.PureRenderMixin],
 
   propTypes: {
-    async: React.PropTypes.bool
+    async: PropTypes.bool
   },
 
   getDefaultProps () {
@@ -30,10 +27,11 @@ module.exports = React.createClass({
   },
 
   render () {
-    return this._render(this.props, this.state);
-  },
-
-  _render (props, state) {
-    return <code ref="code" className={props.className}>{props.children}</code>;
+    const {props, state} = this;
+    return (
+      <code ref="code" className={props.className}>{props.children}</code>
+    );
   }
 });
+
+export default PrismCode;
