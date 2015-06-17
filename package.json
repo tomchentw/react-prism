@@ -10,10 +10,12 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "jsx --harmony ./src ./lib",
-    "build_client": "webpack -p --config ./client/webpack.config.js",
-    "dev": "webpack --config ./client/webpack.config.js && webpack-dev-server --config ./client/webpack.config.js --inline --hot --content-base ./public",
-    "test": "jest"
+    "clean": "rm -rf lib",
+    "build": "npm run lint && npm run clean && babel --stage=1 src --out-dir lib",
+    "build_client": "cd examples/gh-pages && npm i && npm run build_client",
+    "dev": "cd examples/gh-pages && npm i && npm run dev",
+    "lint": "eslint src",
+    "test": "npm run lint && jest"
   },
   "repository": {
     "type": "git",
@@ -46,23 +48,14 @@
   },
   "homepage": "https://tomchentw.github.io/react-prism/",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.4",
-    "css-loader": "^0.12.0",
-    "file-loader": "^0.8.1",
-    "github-fork-ribbon-css": "git+https://github.com/tomchentw/github-fork-ribbon-css.git#gh-pages",
-    "html-webpack-plugin": "^1.1.0",
+    "babel": "^5.1.13",
+    "babel-core": "^5.1.13",
+    "babel-eslint": "^3.1.7",
+    "babel-jest": "^5.3.0",
+    "eslint": "^0.21.2",
     "jest-cli": "^0.4.0",
-    "jsx-loader": "^0.13.2",
-    "node-sass": "^2.1.1",
     "prismjs": "git+https://github.com/PrismJS/prism.git#master",
-    "raw-loader": "^0.5.1",
-    "react-hot-loader": "^1.2.5",
-    "react-tools": "^0.13.2",
-    "sass-loader": "^0.6.0",
-    "style-loader": "^0.12.1",
-    "tomchentw-npm-dev": "^1.1.0",
-    "webpack": "^1.4.7",
-    "webpack-dev-server": "^1.6.5"
+    "tomchentw-npm-dev": "^1.2.0"
   },
   "dependencies": {
     "react": "^0.13.2"
@@ -71,7 +64,7 @@
     "react": "^0.13.2"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/test/__preprocessor__.js",
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "setupTestFrameworkScriptFile": "<rootDir>/test/__framework__.js",
     "testPathDirs": [
       "<rootDir>/src"
