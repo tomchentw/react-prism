@@ -26,6 +26,16 @@ Please refer to [client][client] folder for example.
 This module requires to be bundled with [webpack][webpack]/browserify and loads `react/addons` internally.  
 WIP: release a UMD version via bower/components.
 
+
+First, you have to include [prismjs][prismjs] in your `index.html`:
+
+```html
+<script src="path/to/your/prism.js" ></script>
+```
+
+**Why not require Prism by CommonJS?**
+It's because prism.js will try to run itself as Webworker. It won't take affect if we requre it into the source.
+
 Then:
 
 ```javascript
@@ -66,7 +76,7 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 ## Credits
 
-* [`prismjs`](http://prismjs.com/)
+* [`prismjs`][prismjs]
 
 
 [npm-image]: https://img.shields.io/npm/v/react-prism.svg?style=flat-square
@@ -89,3 +99,4 @@ Then open [http://localhost:8080](http://localhost:8080).
 [demo]: http://tomchentw.github.io/react-prism/
 [client]: https://github.com/tomchentw/react-prism/tree/master/client
 [webpack]: http://webpack.github.io/docs/tutorials/getting-started/
+[prismjs]: http://prismjs.com/
