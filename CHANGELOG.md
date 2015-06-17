@@ -1,3 +1,11 @@
+## 1.4.0 (2015-06-17)
+
+
+#### Features
+
+* **PrismCode:** ES2015 format to prevent eslint warnings ([e0b58d8e](https://github.com/tomchentw/react-prism/commit/e0b58d8e8d4242d421cdabc0935d4c0cc8f92904))
+
+
 ### 1.3.2 (2015-06-17)
 
 
