@@ -1,8 +1,13 @@
-import React from "react";
-
-const {PropTypes} = React;
+import {default as React, PropTypes} from "react";
 
 class ReactHtml extends React.Component {
+
+  static get propTypes () {
+    return {
+      componentString: PropTypes.string.isRequired,
+      clientAssets: PropTypes.object.isRequired,
+    };
+  }
 
   _render_link_to_stylesheet_ (clientAssets) {
     if (clientAssets["client"]) {
@@ -32,10 +37,5 @@ class ReactHtml extends React.Component {
     );
   }
 }
-
-ReactHtml.propTypes = {
-  componentString: PropTypes.string.isRequired,
-  clientAssets: PropTypes.object.isRequired,
-};
 
 export default ReactHtml;
