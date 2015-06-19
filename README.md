@@ -52,12 +52,14 @@ var {PrismCode} = require("react-prism");
 ```
 
 
-### Development
+## Development
 
 ```shell
 git clone ...
 npm install
-npm run dev
+cd examples/gh-pages
+npm install
+npm start
 ```
 
 Then open [http://localhost:8080](http://localhost:8080).
