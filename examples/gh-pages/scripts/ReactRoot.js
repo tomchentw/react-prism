@@ -1,4 +1,5 @@
 import {default as React, PropTypes} from "react";
+import {default as GitHubForkRibbon} from "react-github-fork-ribbon";
 import {default as PrismCode} from "react-prism/PrismCode";
 
 import {default as SelfUpdatedCode} from "./components/SelfUpdatedCode";
@@ -17,11 +18,12 @@ class ReactRoot extends React.Component {
 
     return (
       <div className="container-fluid container--full-height">
-        <div className="github-fork-ribbon-wrapper right">
-          <div className="github-fork-ribbon" style={{backgroundColor: "#333"}}>
-            <a href="https://github.com/tomchentw/react-prism">Fork me on GitHub</a>
-          </div>
-        </div>
+        <GitHubForkRibbon
+          position="right"
+          color="black"
+          href="https://github.com/tomchentw/react-prism">
+          Fork me on GitHub
+        </GitHubForkRibbon>
         <div className="row row--full-height">
           <div className="col-xs-6">
             <h2>
