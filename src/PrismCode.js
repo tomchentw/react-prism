@@ -5,12 +5,12 @@ var PrismCode = React.createClass({
   mixins: [addons.PureRenderMixin],
 
   propTypes: {
-    async: PropTypes.bool
+    async: PropTypes.bool,
   },
 
   getDefaultProps () {
     return {
-      async: true
+      async: true,
     };
   },
 
@@ -31,7 +31,7 @@ var PrismCode = React.createClass({
     return (
       <code ref="code" className={props.className}>{props.children}</code>
     );
-  }
+  },
 });
 
 export default PrismCode;
