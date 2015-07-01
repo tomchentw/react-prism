@@ -1,3 +1,12 @@
+<a name"1.4.1"></a>
+### 1.4.1 (2015-07-01)
+
+
+#### Bug Fixes
+
+* **src:** eslint rules ([f6563724](https://github.com/tomchentw/react-prism/commit/f6563724))
+
+
 ## 1.4.0 (2015-06-17)
 
 
