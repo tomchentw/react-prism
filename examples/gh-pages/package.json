@@ -28,6 +28,6 @@
     "node-libs-browser": "^0.5.2",
     "prismjs": "git+https://github.com/PrismJS/prism.git#master",
     "react": "^0.13.3",
-    "react-github-fork-ribbon": "^0.3.0"
+    "react-github-fork-ribbon": "^0.4.1"
   }
 }
