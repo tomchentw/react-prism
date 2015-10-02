@@ -1,3 +1,13 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tomchentw/react-prism/compare/v1.4.1...v2.0.0) (2015-10-02)
+
+
+### Features
+
+* **PrismCode:** upgrade to support react@^0.14.0-rc1 ([cb0a0fa](https://github.com/tomchentw/react-prism/commit/cb0a0fa))
+
+
+
 <a name"1.4.1"></a>
 ### 1.4.1 (2015-07-01)
 
