@@ -23,8 +23,7 @@ Please refer to [client][client] folder for example.
 
 ## Usage
 
-This module requires to be bundled with [webpack][webpack]/browserify and loads `react/addons` internally.  
-WIP: release a UMD version via bower/components.
+This module requires to be bundled with [webpack][webpack]/browserify.
 
 
 First, you have to include [prismjs][prismjs] in your `index.html`:
@@ -39,7 +38,7 @@ It's because prism.js will try to run itself as Webworker. It won't take affect 
 Then:
 
 ```javascript
-var {PrismCode} = require("react-prism");
+import {PrismCode} from "react-prism";
 
   // In a react component:
   render () {

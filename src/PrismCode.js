@@ -1,37 +1,42 @@
-import {default as React, PropTypes, addons} from "react/addons";
+import {
+  default as React,
+  Component,
+  PropTypes,
+} from "react";
+
+import {
+  default as shouldPureComponentUpdate,
+} from "react-pure-render/function"
+
 /* global Prism */
 
-var PrismCode = React.createClass({
-  mixins: [addons.PureRenderMixin],
-
-  propTypes: {
+export default class PrismCode extends Component {
+  static propTypes = {
     async: PropTypes.bool,
-  },
-
-  getDefaultProps () {
-    return {
-      async: true,
-    };
-  },
+  }
 
   componentDidMount () {
     this._hightlight();
-  },
+  }
+
+  shouldComponentUpdate = shouldPureComponentUpdate;
 
   componentDidUpdate () {
     this._hightlight();
-  },
+  }
 
   _hightlight () {
-    Prism.highlightElement(this.refs.code.getDOMNode(), this.props.async);
-  },
+    Prism.highlightElement(this.refs.code, this.props.async);
+  }
 
   render () {
-    const {props, state} = this;
     return (
-      <code ref="code" className={props.className}>{props.children}</code>
+      <code
+        ref="code"
+        className={this.props.className}
+      >
+        {this.props.children}
+      </code>
     );
-  },
-});
-
-export default PrismCode;
+  }
+}

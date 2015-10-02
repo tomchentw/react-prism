@@ -1,2 +1,3 @@
-"use strict";
-exports.PrismCode = require("./PrismCode");
+export {
+  default as PrismCode,
+} from "./PrismCode";
