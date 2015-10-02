@@ -1,5 +1,6 @@
 import {default as React, PropTypes} from "react";
-import {default as PrismCode} from "react-prism/PrismCode";
+
+import {PrismCode} from "../../../../src/index";
 
 const CODE_LIST = [
   {
@@ -8,11 +9,11 @@ const CODE_LIST = [
   },
   {
     className: "language-css",
-    codeBlock: require("raw-loader!../../texts/prism.text"),
+    codeBlock: require("raw-loader!../texts/prism.text"),
   },
   {
     className: "language-markup",
-    codeBlock: require("raw-loader!../../texts/markup.text"),
+    codeBlock: require("raw-loader!../texts/markup.text"),
   }
 ];
 

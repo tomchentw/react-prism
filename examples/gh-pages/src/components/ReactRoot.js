@@ -1,15 +1,17 @@
 import {default as React, PropTypes} from "react";
 import {default as GitHubForkRibbon} from "react-github-fork-ribbon";
-import {default as PrismCode} from "react-prism/PrismCode";
 
-import {default as SelfUpdatedCode} from "./components/SelfUpdatedCode";
+import {PrismCode} from "../../../../src/index";
+import {default as SelfUpdatedCode} from "./SelfUpdatedCode";
 
-class ReactRoot extends React.Component {
+export default class ReactRoot extends React.Component {
 
-  static get propTypes () {
-    return {
-      intervalSeconds: PropTypes.number.isRequired,
-    };
+  static propTypes = {
+    intervalSeconds: PropTypes.number.isRequired,
+  }
+
+  static defaultProps = {
+    intervalSeconds: 2,
   }
 
   render () {
@@ -40,7 +42,7 @@ class ReactRoot extends React.Component {
               <small>by creating a component SelfUpdatedCode</small>
             </h2>
             <pre><PrismCode className="language-javascript">
-              {require("!raw-loader!./components/SelfUpdatedCode")}
+              {require("!raw-loader!./SelfUpdatedCode")}
             </PrismCode></pre>
           </div>
         </div>
@@ -48,5 +50,3 @@ class ReactRoot extends React.Component {
     );
   }
 }
-
-export default ReactRoot;
