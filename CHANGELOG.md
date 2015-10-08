@@ -1,3 +1,18 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/tomchentw/react-prism/compare/v2.0.0...v3.0.0) (2015-10-08)
+
+
+### Features
+
+* **package.json:** upgrade to React@^0.14 ([f35be91](https://github.com/tomchentw/react-prism/commit/f35be91))
+
+
+### BREAKING CHANGES
+
+* * __React@^0.14__: upgrade React in peerDependencies
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/tomchentw/react-prism/compare/v1.4.1...v2.0.0) (2015-10-02)
 
