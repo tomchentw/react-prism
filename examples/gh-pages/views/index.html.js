@@ -16,7 +16,7 @@ export default (
       <meta charSet="UTF-8" />
       <WebpackStyleEntry
         chunkName="client"
-        chunkFilepath="./src/client.js"
+        chunkFilepath="../src/client.js"
         configFilepath="../Client.webpackConfig.js"
       />
       <WebpackScriptEntry
@@ -30,12 +30,12 @@ export default (
         id="react-container"
         tagName="div"
         chunkName="server"
-        chunkFilepath="./src/server.js"
+        chunkFilepath="../src/server.js"
         configFilepath="../Server.webpackConfig.js"
       />
       <WebpackScriptEntry
         chunkName="client"
-        chunkFilepath="./src/client.js"
+        chunkFilepath="../src/client.js"
         configFilepath="../Client.webpackConfig.js"
       />
     </body>
