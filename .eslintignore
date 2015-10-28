@@ -1,4 +1,4 @@
 examples/**
 lib/**
 public/**
-__tests__/**
+**/__tests__/**
