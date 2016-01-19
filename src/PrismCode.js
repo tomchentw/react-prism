@@ -5,8 +5,8 @@ import {
 } from "react";
 
 import {
-  default as shouldPureComponentUpdate,
-} from "react-pure-render/function"
+  default as ReactComponentWithPureRenderMixin,
+} from "react-addons-pure-render-mixin"
 
 /* global Prism */
 
@@ -19,7 +19,7 @@ export default class PrismCode extends Component {
     this._hightlight();
   }
 
-  shouldComponentUpdate = shouldPureComponentUpdate;
+  shouldComponentUpdate = ReactComponentWithPureRenderMixin.shouldComponentUpdate;
 
   componentDidUpdate () {
     this._hightlight();
