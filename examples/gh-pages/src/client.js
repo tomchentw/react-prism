@@ -1,8 +1,15 @@
-import {default as React} from "react";
-import {default as ReactDOM} from "react-dom";
+import {
+  default as React,
+} from "react";
 
-import {default as ReactRoot} from "./components/ReactRoot";
+import {
+  default as ReactDOM,
+} from "react-dom";
 
-require("./styles/index.scss");
+import {
+  default as ReactRoot,
+} from "./components/ReactRoot";
 
-ReactDOM.render(<ReactRoot />, document.getElementById("react-container"));
+require(`./styles/index.scss`);
+
+ReactDOM.render(<ReactRoot />, document.getElementById(`react-container`));

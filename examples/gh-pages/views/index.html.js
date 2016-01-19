@@ -21,7 +21,7 @@ export default (
       />
       <WebpackScriptEntry
         chunkName="prism"
-        chunkFilepath={require.resolve("prismjs")}
+        chunkFilepath={require.resolve(`prismjs`)}
         configFilepath="../WebWorker.webpackConfig.js"
       />
     </head>
