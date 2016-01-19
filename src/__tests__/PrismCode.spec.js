@@ -3,20 +3,12 @@ import {
 } from "expect";
 
 import {
-  default as jsdom,
-} from "mocha-jsdom";
-
-import {
   default as React,
 } from "react";
 
 import {
   default as ReactDOM,
 } from "react-dom";
-
-import {
-  default as TestUtils,
-} from "react-addons-test-utils";
 
 import {
   default as Prism,
@@ -26,37 +18,47 @@ import {
   default as PrismCode,
 } from "../PrismCode";
 
-describe("PrismCode", () => {
-  jsdom();
-
-  before(() => {
+describe(`PrismCode`, function describe() {
+  before(function before() {
     global.Prism = Prism;
   });
 
-  after(() => {
+  after(function after() {
     delete global.Prism;
   });
 
-  it("should render original code in the first run", () => {
-    const prismCodeComponent = TestUtils.renderIntoDocument(
+  let dom;
+
+  beforeEach(function beforeEach() {
+    dom = document.createElement(`div`);
+  });
+
+  afterEach(function afterEach() {
+    ReactDOM.unmountComponentAtNode(dom);
+  });
+
+  it(`should render original code in the first run`, function it() {
+    ReactDOM.render((
       <PrismCode className="language-javascript">
         require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);
       </PrismCode>
-    );
-    const codeDOMNode = ReactDOM.findDOMNode(prismCodeComponent);
+    ), dom);
 
-    expect(codeDOMNode.textContent).toEqual("require(\"react/addons\").addons.TestUtils.renderIntoDocument(/* wtf ?*/);");
+    expect(dom.textContent).toEqual(
+      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`
+    );
   });
 
-  it("should render hightlighted code in the second run", () => {
-    const prismCodeComponent = TestUtils.renderIntoDocument(
+  it(`should render hightlighted code in the second run`, function it() {
+    ReactDOM.render((
       <PrismCode className="language-javascript">
         var React, TestUtils;
       </PrismCode>
-    );
+    ), dom);
 
-    const codeDOMNode = ReactDOM.findDOMNode(prismCodeComponent);
     // FIXME: exact content here
-    expect(codeDOMNode.textContent).toNotEqual("require(\"react/addons\").addons.TestUtils.renderIntoDocument(/* wtf ?*/);");
+    expect(dom.textContent).toNotEqual(
+      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`
+    );
   });
 });
