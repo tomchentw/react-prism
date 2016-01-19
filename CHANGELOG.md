@@ -1,3 +1,13 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/tomchentw/react-prism/compare/v3.0.0...v3.1.0) (2016-01-19)
+
+
+### Features
+
+* **PrismCode:** switch to "react-addons-pure-render-mixin" ([da0f917](https://github.com/tomchentw/react-prism/commit/da0f917)), closes [#14](https://github.com/tomchentw/react-prism/issues/14)
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/tomchentw/react-prism/compare/v2.0.0...v3.0.0) (2015-10-08)
 
