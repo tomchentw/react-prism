@@ -1,3 +1,9 @@
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/tomchentw/react-prism/compare/v3.1.0...v3.1.1) (2016-01-28)
+
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/tomchentw/react-prism/compare/v3.0.0...v3.1.0) (2016-01-19)
 
