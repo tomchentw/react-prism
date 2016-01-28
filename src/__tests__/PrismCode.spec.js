@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow-callback */
+
 import {
   default as expect,
 } from "expect";
@@ -18,7 +20,7 @@ import {
   default as PrismCode,
 } from "../PrismCode";
 
-describe(`PrismCode`, function describe() {
+describe(`PrismCode`, function describePrismCode() {
   before(function before() {
     global.Prism = Prism;
   });
