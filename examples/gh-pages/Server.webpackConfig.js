@@ -18,16 +18,6 @@ if (process.env.NODE_ENV === `production`) {
   PRODUCTION_PLUGINS = [];
 }
 
-const externals = [
-  require(`./package.json`).dependencies,
-  require(`../../package.json`).dependencies,
-].reduce((acc, dependencies = {}) => {
-  return [
-    ...acc,
-    ...Object.keys(dependencies).map(key => new RegExp(`^${ key }`)),
-  ];
-}, []);
-
 export default {
   output: {
     path: resolvePath(__dirname, `../../public/assets`),
@@ -36,7 +26,6 @@ export default {
     libraryTarget: `commonjs2`,
   },
   target: `node`,
-  externals,
   module: {
     loaders: [
       {
