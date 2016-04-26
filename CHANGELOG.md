@@ -1,3 +1,13 @@
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/tomchentw/react-prism/compare/v3.1.1...v3.2.0) (2016-04-26)
+
+
+### Features
+
+* **package.json:** update to react@^15.0.0 ([06f7b91](https://github.com/tomchentw/react-prism/commit/06f7b91))
+
+
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/tomchentw/react-prism/compare/v3.1.0...v3.1.1) (2016-01-28)
 
