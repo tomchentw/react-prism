@@ -35,6 +35,7 @@
     "classnames": "^2.2.3",
     "prismjs": "git+https://github.com/PrismJS/prism.git#gh-pages",
     "react": "^0.14.6",
+    "react-addons-pure-render-mixin": "^0.14.8",
     "react-dom": "^0.14.6",
     "react-github-fork-ribbon": "^0.4.2",
     "react-prism": "^3.0.0"
