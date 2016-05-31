@@ -16,6 +16,10 @@ import {
   default as SelfUpdatedCode,
 } from "./SelfUpdatedCode";
 
+import {
+  default as RAW_SELF_UPDATED_CODE,
+} from "!raw-loader!./SelfUpdatedCode"; // eslint-disable-line import/no-unresolved
+
 export default class ReactRoot extends Component {
 
   static propTypes = {
@@ -52,7 +56,7 @@ export default class ReactRoot extends Component {
               <small>by creating a component SelfUpdatedCode</small>
             </h2>
             <pre><PrismCode className="language-javascript">
-              {require(`!raw-loader!./SelfUpdatedCode`)}
+              {RAW_SELF_UPDATED_CODE}
             </PrismCode></pre>
           </div>
         </div>

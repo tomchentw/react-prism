@@ -8,18 +8,30 @@ import {
   PrismCode,
 } from "react-prism";
 
+import {
+  default as RAW_PRISM_JS,
+} from "raw-loader!prismjs/prism.js"; // eslint-disable-line import/no-unresolved
+
+import {
+  default as RAW_PRISM_TEXT,
+} from "raw-loader!../texts/prism.text"; // eslint-disable-line import/no-unresolved
+
+import {
+  default as RAW_MARKUP_TEXT,
+} from "raw-loader!../texts/markup.text"; // eslint-disable-line import/no-unresolved
+
 const CODE_LIST = [
   {
     className: `language-javascript`,
-    codeBlock: require(`raw-loader!prismjs/prism.js`),
+    codeBlock: RAW_PRISM_JS,
   },
   {
     className: `language-css`,
-    codeBlock: require(`raw-loader!../texts/prism.text`),
+    codeBlock: RAW_PRISM_TEXT,
   },
   {
     className: `language-markup`,
-    codeBlock: require(`raw-loader!../texts/markup.text`),
+    codeBlock: RAW_MARKUP_TEXT,
   },
 ];
 
