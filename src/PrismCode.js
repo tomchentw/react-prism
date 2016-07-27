@@ -32,12 +32,17 @@ export default class PrismCode extends Component {
   }
 
   render() {
+    const {
+      className,
+      children,
+    } = this.props;
+
     return (
       <code
         ref="code"
-        className={this.props.className}
+        className={className}
       >
-        {this.props.children}
+        {children}
       </code>
     );
   }
