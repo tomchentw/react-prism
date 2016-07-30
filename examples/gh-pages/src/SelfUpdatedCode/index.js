@@ -10,15 +10,15 @@ import {
 
 import {
   default as RAW_PRISM_JS,
-} from "raw-loader!prismjs/prism.js"; // eslint-disable-line import/no-unresolved
+} from "raw!prismjs/prism.js"; // eslint-disable-line import/no-unresolved
 
 import {
   default as RAW_PRISM_TEXT,
-} from "raw-loader!../texts/prism.text"; // eslint-disable-line import/no-unresolved
+} from "raw!./prism.text"; // eslint-disable-line import/no-unresolved
 
 import {
   default as RAW_MARKUP_TEXT,
-} from "raw-loader!../texts/markup.text"; // eslint-disable-line import/no-unresolved
+} from "raw!./markup.text"; // eslint-disable-line import/no-unresolved
 
 const CODE_LIST = [
   {

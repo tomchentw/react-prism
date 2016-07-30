@@ -18,9 +18,9 @@ import {
 
 import {
   default as RAW_SELF_UPDATED_CODE,
-} from "!raw-loader!./SelfUpdatedCode"; // eslint-disable-line import/no-unresolved
+} from "!raw!./SelfUpdatedCode"; // eslint-disable-line import/no-unresolved
 
-export default class ReactRoot extends Component {
+export default class App extends Component {
 
   static propTypes = {
     intervalSeconds: PropTypes.number.isRequired,
