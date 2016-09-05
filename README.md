@@ -1,5 +1,5 @@
 # react-prism
-> React.js + prismjs syntax hightlight component
+> React.js + Prism.js syntax highlight component
 
 [![Version][npm-image]][npm-url] [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][codeclimate-coverage-image]][codeclimate-coverage-url] [![Dependencies][gemnasium-image]][gemnasium-url] [![Gitter][gitter-image]][gitter-url]
 
@@ -18,22 +18,22 @@ Static hosted [demo site][demo] on GitHub.
 
 ## Example
 
-Please refer to [client][client] folder for example.
+Please refer to the [client][client] folder for an example.
 
 
 ## Usage
 
-This module requires to be bundled with [webpack][webpack]/browserify.
+This module is intended to be bundled with [webpack][webpack]/browserify.
 
 
 First, you have to include [prismjs][prismjs] in your `index.html`:
 
 ```html
-<script src="path/to/your/prism.js" ></script>
+<script src="path/to/your/prism.js"></script>
 ```
 
 **Why not require Prism by CommonJS?**
-It's because prism.js will try to run itself as Webworker. It won't take affect if we requre it into the source.
+It's because prism.js will try to run itself as a Web Worker. It won't take affect if we require it into the source.
 
 Then:
 
@@ -72,7 +72,7 @@ Then open [http://localhost:8080](http://localhost:8080).
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+5. Create new pull request
 
 
 ## Credits
