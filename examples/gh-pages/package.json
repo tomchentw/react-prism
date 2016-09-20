@@ -5,13 +5,13 @@
   "private": true,
   "devDependencies": {
     "raw-loader": "^0.5.1",
-    "react-scripts": "0.2.0"
+    "react-scripts": "0.4.3"
   },
   "dependencies": {
     "prismjs": "^1.5.1",
-    "react": "^15.2.1",
-    "react-addons-pure-render-mixin": "^15.0.0",
-    "react-dom": "^15.2.1",
+    "react": "^15.3.2",
+    "react-addons-pure-render-mixin": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-github-fork-ribbon": "^0.4.4",
     "react-prism": "file:../.."
   },
