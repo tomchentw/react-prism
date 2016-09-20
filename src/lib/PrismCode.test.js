@@ -1,9 +1,3 @@
-/* eslint-disable prefer-arrow-callback */
-
-import {
-  default as expect,
-} from "expect";
-
 import {
   default as React,
 } from "react";
@@ -18,28 +12,28 @@ import {
 
 import {
   default as PrismCode,
-} from "../PrismCode";
+} from "./PrismCode";
 
-describe(`PrismCode`, function describePrismCode() {
-  before(function before() {
+describe(`PrismCode`, () => {
+  beforeAll(() => {
     global.Prism = Prism;
   });
 
-  after(function after() {
+  afterAll(() => {
     delete global.Prism;
   });
 
   let dom;
 
-  beforeEach(function beforeEach() {
+  beforeEach(() => {
     dom = document.createElement(`div`);
   });
 
-  afterEach(function afterEach() {
+  afterEach(() => {
     ReactDOM.unmountComponentAtNode(dom);
   });
 
-  it(`should render original code in the first run`, function it() {
+  it(`should render original code in the first run`, () => {
     ReactDOM.render((
       <PrismCode className="language-javascript">
         require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);
@@ -51,7 +45,7 @@ describe(`PrismCode`, function describePrismCode() {
     );
   });
 
-  it(`should render hightlighted code in the second run`, function it() {
+  it(`should render hightlighted code in the second run`, () => {
     ReactDOM.render((
       <PrismCode className="language-javascript">
         var React, TestUtils;
@@ -59,7 +53,7 @@ describe(`PrismCode`, function describePrismCode() {
     ), dom);
 
     // FIXME: exact content here
-    expect(dom.textContent).toNotEqual(
+    expect(dom.textContent).not.toEqual(
       `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`
     );
   });

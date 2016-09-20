@@ -6,41 +6,17 @@ import {
 
 import {
   PrismCode,
-} from "react-prism";
+} from "../../lib";
 
-import {
-  default as RAW_PRISM_JS,
-} from "raw!prismjs/prism.js"; // eslint-disable-line import/no-unresolved
-
-import {
-  default as RAW_PRISM_TEXT,
-} from "raw!./prism.text"; // eslint-disable-line import/no-unresolved
-
-import {
-  default as RAW_MARKUP_TEXT,
-} from "raw!./markup.text"; // eslint-disable-line import/no-unresolved
-
-const CODE_LIST = [
-  {
-    className: `language-javascript`,
-    codeBlock: RAW_PRISM_JS,
-  },
-  {
-    className: `language-css`,
-    codeBlock: RAW_PRISM_TEXT,
-  },
-  {
-    className: `language-markup`,
-    codeBlock: RAW_MARKUP_TEXT,
-  },
-];
-
-const CODE_LIST_LENGTH = CODE_LIST.length;
+const CODE_LIST_LENGTH = 3;
 
 export default class SelfUpdatedCode extends Component {
 
   static propTypes = {
-    intervalMillis: PropTypes.number.isRequired,
+    intervalSeconds: PropTypes.number.isRequired,
+    rawPrismJs: PropTypes.string.isRequired,
+    rawPrismText: PropTypes.string.isRequired,
+    rawMarkupText: PropTypes.string.isRequired,
   };
 
   state = {
@@ -53,7 +29,7 @@ export default class SelfUpdatedCode extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.intervalMillis !== this.props.intervalMillis) {
+    if (nextProps.intervalSeconds !== this.props.intervalSeconds) {
       this._clearInterval();
       this.setState({ _intervalId: null });
     }
@@ -73,7 +49,7 @@ export default class SelfUpdatedCode extends Component {
     }
     const _intervalId = setInterval(() => {
       this.setState({ _index: (this.state._index + 1) % CODE_LIST_LENGTH });
-    }, this.props.intervalMillis);
+    }, this.props.intervalSeconds * 1000);
     this.setState({ _intervalId });
   }
 
@@ -82,8 +58,23 @@ export default class SelfUpdatedCode extends Component {
   }
 
   render() {
-    const { state } = this;
-    const { className, codeBlock } = CODE_LIST[state._index];
+    const CODE_LIST = [
+      {
+        className: `language-javascript`,
+        codeBlock: this.props.rawPrismJs,
+      },
+      {
+        className: `language-css`,
+        codeBlock: this.props.rawPrismText,
+      },
+      {
+        className: `language-markup`,
+        codeBlock: this.props.rawMarkupText,
+      },
+    ];
+
+    const { className, codeBlock } = CODE_LIST[this.state._index];
+
     return (
       <PrismCode className={className}>{codeBlock}</PrismCode>
     );

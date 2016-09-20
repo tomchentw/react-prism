@@ -10,24 +10,20 @@ import {
 
 import {
   PrismCode,
-} from "react-prism";
+} from "../lib";
 
 import {
   default as SelfUpdatedCode,
 } from "./SelfUpdatedCode";
 
-import {
-  default as RAW_SELF_UPDATED_CODE,
-} from "!raw!./SelfUpdatedCode"; // eslint-disable-line import/no-unresolved
-
 export default class App extends Component {
 
   static propTypes = {
     intervalSeconds: PropTypes.number.isRequired,
-  };
-
-  static defaultProps = {
-    intervalSeconds: 2,
+    rawSelfUpdatedCode: PropTypes.string.isRequired,
+    rawPrismJs: PropTypes.string.isRequired,
+    rawPrismText: PropTypes.string.isRequired,
+    rawMarkupText: PropTypes.string.isRequired,
   };
 
   render() {
@@ -47,7 +43,9 @@ export default class App extends Component {
               <br />
               <small>update every {this.props.intervalSeconds} seconds</small>
             </h2>
-            <pre><SelfUpdatedCode intervalMillis={this.props.intervalSeconds * 1000} /></pre>
+            <pre>
+              <SelfUpdatedCode {...this.props} />
+            </pre>
           </div>
           <div className="col-xs-6">
             <h2>
@@ -55,9 +53,11 @@ export default class App extends Component {
               <br />
               <small>by creating a component SelfUpdatedCode</small>
             </h2>
-            <pre><PrismCode className="language-javascript">
-              {RAW_SELF_UPDATED_CODE}
-            </PrismCode></pre>
+            <pre>
+              <PrismCode className="language-javascript">
+                {this.props.rawSelfUpdatedCode}
+              </PrismCode>
+            </pre>
           </div>
         </div>
       </div>

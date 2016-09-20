@@ -1,13 +1,9 @@
 import {
-  default as expect,
-} from "expect";
-
-import {
   PrismCode,
-} from "../index";
+} from "./index";
 
 describe(`index`, () => {
   it(`should export components`, () => {
-    expect(PrismCode).toExist();
+    expect(PrismCode).toBeDefined();
   });
 });
