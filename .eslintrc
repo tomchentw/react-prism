@@ -18,6 +18,7 @@
   "rules": {
     // Possible Errors
     "comma-dangle": [2, "always-multiline"],
+    "linebreak-style": ["error", "windows"],
     // Best Practices
     "consistent-return": [0],
     "no-else-return": [0],
