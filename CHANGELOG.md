@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/tomchentw/react-prism/compare/v3.2.2...v4.0.0) (2016-09-21)
+
+
+### Features
+
+* **package.json:** upgrade peerDependencies to `react@^15.3.0` ([963b33d](https://github.com/tomchentw/react-prism/commit/963b33d))
+* **PrismCode:** switch react-addons-pure-render-mixin to React.PureComponent ([#25](https://github.com/tomchentw/react-prism/issues/25)) ([de25f69](https://github.com/tomchentw/react-prism/commit/de25f69)), closes [#21](https://github.com/tomchentw/react-prism/issues/21)
+
+
+### BREAKING CHANGES
+
+* package.json: drop support for `react@^0.14.0`
+* package.json: remove peerDependency of `react-addons-pure-render-mixin`
+
+
+
 <a name="3.2.2"></a>
 ## [3.2.2](https://github.com/tomchentw/react-prism/compare/v3.2.1...v3.2.2) (2016-09-20)
 
