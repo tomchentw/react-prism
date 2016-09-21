@@ -10,7 +10,6 @@
   "dependencies": {
     "prismjs": "^1.5.1",
     "react": "^15.3.2",
-    "react-addons-pure-render-mixin": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-github-fork-ribbon": "^0.4.4",
     "react-prism": "file:../.."
