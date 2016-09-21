@@ -78,15 +78,13 @@
     "jsdom": "^9.2.1",
     "mocha": "^2.4.4",
     "prismjs": "git+https://github.com/PrismJS/prism.git#gh-pages",
-    "react": "^15.0.0",
-    "react-addons-pure-render-mixin": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "rimraf": "^2.5.1",
     "standard-version": "^2.2.1",
     "tomchentw-npm-dev": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "^0.14.6 || ^15.0.0",
-    "react-addons-pure-render-mixin": "^0.14.0 || ^15.0.0"
+    "react": "^15.3.0"
   }
 }

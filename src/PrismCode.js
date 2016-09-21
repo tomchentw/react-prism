@@ -2,15 +2,11 @@
 
 import {
   default as React,
-  Component,
+  PureComponent,
   PropTypes,
 } from "react";
 
-import {
-  default as ReactComponentWithPureRenderMixin,
-} from "react-addons-pure-render-mixin";
-
-export default class PrismCode extends Component {
+export default class PrismCode extends PureComponent {
   static propTypes = {
     async: PropTypes.bool,
     className: PropTypes.string,
@@ -20,8 +16,6 @@ export default class PrismCode extends Component {
   componentDidMount() {
     this._hightlight();
   }
-
-  shouldComponentUpdate = ReactComponentWithPureRenderMixin.shouldComponentUpdate;
 
   componentDidUpdate() {
     this._hightlight();
