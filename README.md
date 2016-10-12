@@ -72,6 +72,6 @@ import {PrismCode} from "react-prism";
 
 
 [demo]: https://tomchentw.github.io/react-prism/
-[src/app]: https://github.com/tomchentw/react-toastr/tree/master/src/app
+[src/app]: https://github.com/tomchentw/react-prism/tree/master/src/app
 [webpack]: https://webpack.github.io/docs/tutorials/getting-started/
 [prismjs]: http://prismjs.com/
