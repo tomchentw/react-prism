@@ -3,8 +3,11 @@
 import {
   default as React,
   PureComponent,
-  PropTypes,
 } from "react";
+
+import {
+  PropTypes,
+} from 'prop-types';
 
 export default class PrismCode extends PureComponent {
   static propTypes = {

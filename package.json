@@ -81,6 +81,7 @@
     "standard-version": "^2.4.0"
   },
   "peerDependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.3.0"
   }
 }
