@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/tomchentw/react-prism/compare/v4.0.0...v4.1.0) (2017-04-28)
+
+
+### Features
+
+* **package.json:** add "prop-types" to peerDependencies ([417e9f5](https://github.com/tomchentw/react-prism/commit/417e9f5))
+* **PrismCode:** replace React.PropTypes with "prop-types" package ([b20ec63](https://github.com/tomchentw/react-prism/commit/b20ec63)), closes [#31](https://github.com/tomchentw/react-prism/issues/31)
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/tomchentw/react-prism/compare/v3.2.2...v4.0.0) (2016-09-21)
 
