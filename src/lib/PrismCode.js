@@ -14,6 +14,7 @@ export default class PrismCode extends PureComponent {
     async: PropTypes.bool,
     className: PropTypes.string,
     children: PropTypes.any,
+    component: PropTypes.node,
   };
 
   componentDidMount() {
@@ -25,22 +26,24 @@ export default class PrismCode extends PureComponent {
   }
 
   _hightlight() {
-    Prism.highlightElement(this.refs.code, this.props.async);
+    Prism.highlightElement(this._domNode, this.props.async);
   }
 
   render() {
     const {
       className,
       children,
+      component,
     } = this.props;
-
+    
+    const Wrapper = component ? component : `code`;
     return (
-      <code
-        ref="code"
+      <Wrapper
+        ref={domNode => this._domNode = domNode}
         className={className}
       >
         {children}
-      </code>
+      </Wrapper>
     );
   }
 }
