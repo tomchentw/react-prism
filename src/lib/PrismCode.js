@@ -39,7 +39,7 @@ export default class PrismCode extends PureComponent {
     const Wrapper = component ? component : `code`;
     return (
       <Wrapper
-        ref={domeNode => this._domNode = domeNode}
+        ref={domNode => this._domNode = domNode}
         className={className}
       >
         {children}
