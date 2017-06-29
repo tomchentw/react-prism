@@ -1,26 +1,14 @@
-import {
-  default as React,
-  Component,
-} from "react";
+import React, { Component } from "react";
 
-import {
-  PropTypes,
-} from 'prop-types';
+import { PropTypes } from "prop-types";
 
-import {
-  default as GitHubForkRibbon,
-} from "react-github-fork-ribbon";
+import GitHubForkRibbon from "react-github-fork-ribbon";
 
-import {
-  PrismCode,
-} from "../lib";
+import { PrismCode } from "../lib";
 
-import {
-  default as SelfUpdatedCode,
-} from "./SelfUpdatedCode";
+import SelfUpdatedCode from "./SelfUpdatedCode";
 
 export default class App extends Component {
-
   static propTypes = {
     intervalSeconds: PropTypes.number.isRequired,
     rawSelfUpdatedCode: PropTypes.string.isRequired,

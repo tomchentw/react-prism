@@ -1,30 +1,16 @@
-import {
-  default as React,
-} from "react";
+import React from "react";
 
-import {
-  default as ReactDOM,
-} from "react-dom";
+import ReactDOM from "react-dom";
 
-import {
-  default as rawPrismJs,
-} from "raw!prismjs";
+import rawPrismJs from "raw!prismjs";
 
-import {
-  default as rawSelfUpdatedCode,
-} from "!raw!./app/SelfUpdatedCode";
+import rawSelfUpdatedCode from "!raw!./app/SelfUpdatedCode";
 
-import {
-  default as rawPrismText,
-} from "raw!./app/SelfUpdatedCode/prism.text";
+import rawPrismText from "raw!./app/SelfUpdatedCode/prism.text";
 
-import {
-  default as rawMarkupText,
-} from "raw!./app/SelfUpdatedCode/markup.text";
+import rawMarkupText from "raw!./app/SelfUpdatedCode/markup.text";
 
-import {
-  default as App,
-} from "./app/App";
+import App from "./app/App";
 
 import "./index.css";
 
@@ -36,5 +22,5 @@ ReactDOM.render(
     rawPrismText={rawPrismText}
     rawMarkupText={rawMarkupText}
   />,
-  document.getElementById(`root`)
+  document.getElementById(`root`),
 );

@@ -1,3 +1,1 @@
-export {
-  default as PrismCode,
-} from "./PrismCode";
+export { default as PrismCode } from "./PrismCode";

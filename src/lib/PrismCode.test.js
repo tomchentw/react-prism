@@ -1,18 +1,10 @@
-import {
-  default as React,
-} from "react";
+import React from "react";
 
-import {
-  default as ReactDOM,
-} from "react-dom";
+import ReactDOM from "react-dom";
 
-import {
-  default as Prism,
-} from "prismjs";
+import Prism from "prismjs";
 
-import {
-  default as PrismCode,
-} from "./PrismCode";
+import PrismCode from "./PrismCode";
 
 describe(`PrismCode`, () => {
   beforeAll(() => {
@@ -34,27 +26,29 @@ describe(`PrismCode`, () => {
   });
 
   it(`should render original code in the first run`, () => {
-    ReactDOM.render((
+    ReactDOM.render(
       <PrismCode className="language-javascript">
         require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);
-      </PrismCode>
-    ), dom);
+      </PrismCode>,
+      dom,
+    );
 
     expect(dom.textContent).toEqual(
-      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`
+      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`,
     );
   });
 
   it(`should render hightlighted code in the second run`, () => {
-    ReactDOM.render((
+    ReactDOM.render(
       <PrismCode className="language-javascript">
         var React, TestUtils;
-      </PrismCode>
-    ), dom);
+      </PrismCode>,
+      dom,
+    );
 
     // FIXME: exact content here
     expect(dom.textContent).not.toEqual(
-      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`
+      `require("react/addons").addons.TestUtils.renderIntoDocument(/* wtf ?*/);`,
     );
   });
 });

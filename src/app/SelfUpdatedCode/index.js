@@ -1,20 +1,12 @@
-import {
-  default as React,
-  Component,
-} from "react";
+import React, { Component } from "react";
 
-import {
-  PropTypes,
-} from 'prop-types';
+import { PropTypes } from "prop-types";
 
-import {
-  PrismCode,
-} from "../../lib";
+import { PrismCode } from "../../lib";
 
 const CODE_LIST_LENGTH = 3;
 
 export default class SelfUpdatedCode extends Component {
-
   static propTypes = {
     intervalSeconds: PropTypes.number.isRequired,
     rawPrismJs: PropTypes.string.isRequired,
@@ -79,7 +71,9 @@ export default class SelfUpdatedCode extends Component {
     const { className, codeBlock } = CODE_LIST[this.state._index];
 
     return (
-      <PrismCode className={className}>{codeBlock}</PrismCode>
+      <PrismCode className={className}>
+        {codeBlock}
+      </PrismCode>
     );
   }
 }

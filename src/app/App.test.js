@@ -1,18 +1,10 @@
-import {
-  default as React,
-} from "react";
+import React from "react";
 
-import {
-  default as ReactDOM,
-} from "react-dom";
+import ReactDOM from "react-dom";
 
-import {
-  default as Prism,
-} from "prismjs";
+import Prism from "prismjs";
 
-import {
-  default as App,
-} from "./App";
+import App from "./App";
 
 describe(`App`, () => {
   beforeAll(() => {
@@ -22,7 +14,6 @@ describe(`App`, () => {
   afterAll(() => {
     delete global.Prism;
   });
-
 
   it(`renders without crashing`, () => {
     const div = document.createElement(`div`);

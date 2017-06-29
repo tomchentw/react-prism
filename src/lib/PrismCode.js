@@ -1,13 +1,8 @@
 /* global Prism */
 
-import {
-  default as React,
-  PureComponent,
-} from "react";
+import React, { PureComponent } from "react";
 
-import {
-  PropTypes,
-} from 'prop-types';
+import { PropTypes } from "prop-types";
 
 export default class PrismCode extends PureComponent {
   static propTypes = {
@@ -29,16 +24,10 @@ export default class PrismCode extends PureComponent {
   }
 
   render() {
-    const {
-      className,
-      children,
-    } = this.props;
+    const { className, children } = this.props;
 
     return (
-      <code
-        ref="code"
-        className={className}
-      >
+      <code ref="code" className={className}>
         {children}
       </code>
     );

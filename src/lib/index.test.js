@@ -1,6 +1,4 @@
-import {
-  PrismCode,
-} from "./index";
+import { PrismCode } from "./index";
 
 describe(`index`, () => {
   it(`should export components`, () => {
