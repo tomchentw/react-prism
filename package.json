@@ -65,7 +65,6 @@
     "babel-plugin-typecheck": "^3.9.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-react-app": "^3.0.1",
     "babel-preset-stage-0": "^6.24.1",
     "codeclimate-test-reporter": "^0.5.0",
     "cross-env": "^5.0.1",
