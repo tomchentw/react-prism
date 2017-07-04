@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.3.0"></a>
+# [4.3.0](https://github.com/tomchentw/react-prism/compare/v4.2.0...v4.3.0) (2017-07-04)
+
+
+### Features
+
+* **PrismCode:** allow to configure the wrapper component ([57a117c](https://github.com/tomchentw/react-prism/commit/57a117c)), closes [#34](https://github.com/tomchentw/react-prism/issues/34)
+
+
+
 <a name="4.2.0"></a>
 # [4.2.0](https://github.com/tomchentw/react-prism/compare/v4.1.0...v4.2.0) (2017-06-30)
 
