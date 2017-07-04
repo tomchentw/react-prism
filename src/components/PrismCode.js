@@ -9,7 +9,12 @@ export default class PrismCode extends PureComponent {
     async: PropTypes.bool,
     className: PropTypes.string,
     children: PropTypes.any,
+    component: PropTypes.node,
   };
+
+  static defaultProps = {
+    component: `code`,
+  }
 
   componentDidMount() {
     this._hightlight();
@@ -20,16 +25,23 @@ export default class PrismCode extends PureComponent {
   }
 
   _hightlight() {
-    Prism.highlightElement(this.refs.code, this.props.async);
+    Prism.highlightElement(this._domNode, this.props.async);
+  }
+
+  _handleRefMount = (domNode) => {
+    this._domNode = domNode
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className, component: Wrapper, children } = this.props;
 
     return (
-      <code ref="code" className={className}>
+      <Wrapper
+        ref={this._handleRefMount}
+        className={className}
+      >
         {children}
-      </code>
+      </Wrapper>
     );
   }
 }
