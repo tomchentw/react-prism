@@ -11,14 +11,9 @@ npm i --save react-prism
 ```
 
 
-## Demo
+## Docs
 
-Static hosted [demo site][demo] on GitHub.
-
-
-## Example
-
-Check [src/app][src/app] folder.
+Static hosted [Docs site][docs] on GitHub.
 
 
 ## Usage
@@ -71,7 +66,6 @@ import {PrismCode} from "react-prism";
 [gitter-url]: https://gitter.im/tomchentw/react-prism?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 
-[demo]: https://tomchentw.github.io/react-prism/
-[src/app]: https://github.com/tomchentw/react-prism/tree/master/src/app
+[docs]: https://tomchentw.github.io/react-prism/
 [webpack]: https://webpack.github.io/docs/tutorials/getting-started/
 [prismjs]: http://prismjs.com/
