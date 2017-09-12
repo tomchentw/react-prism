@@ -18,7 +18,7 @@
     "prettier": "prettier --trailing-comma=all --write \"./src/**/*.{js,css}\"",
     "lint": "cross-env NODE_ENV=test eslint .",
     "prebuild:lib": "npm run lint && npm run clean",
-    "build:lib": "cross-env NODE_ENV=production babel src/ --out-dir lib/",
+    "build:lib": "cross-env NODE_ENV=production babel src/ --out-dir lib/ --ignore spec.js",
     "precommit:lib": "npm run build:lib",
     "commit:lib": "git add -A && git commit -m 'chore(lib): compile from src with `babel`'",
     "precommit:docs": "npm run styleguide:build",
