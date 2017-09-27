@@ -4,46 +4,13 @@
 [![Version][npm-image]][npm-url] [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][codeclimate-coverage-image]][codeclimate-coverage-url] [![Dependencies][gemnasium-image]][gemnasium-url] [![Gitter][gitter-image]][gitter-url]
 
 
-## Installation
+## Usage / Documentation
 
 ```sh
 npm i --save react-prism
 ```
 
-
-## Docs
-
-Static hosted [Docs site][docs] on GitHub.
-
-
-## Usage
-
-This module is intended to be bundled with [webpack][webpack]/browserify.
-
-
-First, you have to include [prismjs][prismjs] in your `index.html`:
-
-```html
-<script src="path/to/your/prism.js"></script>
-```
-
-**Why not require Prism by CommonJS?**
-It's because prism.js will try to run itself as a Web Worker. It won't take affect if we require it into the source.
-
-Then:
-
-```jsx
-import {PrismCode} from "react-prism";
-
-  // In a react component:
-  render () {
-    return (
-      <PrismCode className="language-javascript">
-        {require("raw-loader!./PrismCode")}
-      </PrismCode>
-    );
-  }
-```
+Then, read the [documentation][docs].
 
 
 ## Credits
@@ -67,5 +34,4 @@ import {PrismCode} from "react-prism";
 
 
 [docs]: https://tomchentw.github.io/react-prism/
-[webpack]: https://webpack.github.io/docs/tutorials/getting-started/
 [prismjs]: http://prismjs.com/
