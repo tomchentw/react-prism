@@ -1,8 +1,8 @@
 /* global Prism */
 
-import React, { PureComponent } from "react";
+import React, { PureComponent } from "react"
 
-import { PropTypes } from "prop-types";
+import { PropTypes } from "prop-types"
 
 export default class PrismCode extends PureComponent {
   static propTypes = {
@@ -10,38 +10,35 @@ export default class PrismCode extends PureComponent {
     className: PropTypes.string,
     children: PropTypes.any,
     component: PropTypes.node,
-  };
+  }
 
   static defaultProps = {
     component: `code`,
   }
 
   componentDidMount() {
-    this._hightlight();
+    this._hightlight()
   }
 
   componentDidUpdate() {
-    this._hightlight();
+    this._hightlight()
   }
 
   _hightlight() {
-    Prism.highlightElement(this._domNode, this.props.async);
+    Prism.highlightElement(this._domNode, this.props.async)
   }
 
-  _handleRefMount = (domNode) => {
+  _handleRefMount = domNode => {
     this._domNode = domNode
   }
 
   render() {
-    const { className, component: Wrapper, children } = this.props;
+    const { className, component: Wrapper, children } = this.props
 
     return (
-      <Wrapper
-        ref={this._handleRefMount}
-        className={className}
-      >
+      <Wrapper ref={this._handleRefMount} className={className}>
         {children}
       </Wrapper>
-    );
+    )
   }
 }
