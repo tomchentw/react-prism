@@ -26,7 +26,8 @@
     "commit:docs":
       "git add -A && git commit -m 'docs: compile from src with `styleguidist`'",
     "prerelease": "npm run commit:lib && npm run commit:docs",
-    "release": "standard-version"
+    "release":
+      "standard-version -m 'chore(release): %s \n\n* CHANGELOG: https://github.com/tomchentw/react-prism/blob/v%s/CHANGELOG.md'"
   },
   "repository": {
     "type": "git",
@@ -81,7 +82,7 @@
     "react-scripts": "^1.0.13",
     "react-styleguidist": "^6.0.24",
     "rimraf": "^2.6.2",
-    "standard-version": "^4.2.0"
+    "standard-version": "^4.3.0-candidate.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.0",
