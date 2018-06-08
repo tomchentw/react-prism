@@ -3,9 +3,16 @@
   "version": "4.3.2",
   "description": "React.js + prismjs syntax hightlight component",
   "main": "lib/index.js",
-  "files": ["lib/", "src/", "CHANGELOG.md"],
+  "files": [
+    "lib/",
+    "src/",
+    "CHANGELOG.md"
+  ],
   "lint-staged": {
-    "*.{js,jsx,json,css}": ["prettier --write", "git add"]
+    "*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -17,17 +24,13 @@
     "clean": "rimraf lib",
     "lint": "cross-env NODE_ENV=test eslint .",
     "prebuild:lib": "npm run lint && npm run clean",
-    "build:lib":
-      "cross-env NODE_ENV=production babel src/ --out-dir lib/ --ignore spec.js",
+    "build:lib": "cross-env NODE_ENV=production babel src/ --out-dir lib/ --ignore spec.js",
     "precommit:lib": "npm run build:lib",
-    "commit:lib":
-      "git add -A && git commit -m 'chore(lib): compile from src with `babel`'",
+    "commit:lib": "git add -A && git commit -m 'chore(lib): compile from src with `babel`'",
     "precommit:docs": "npm run styleguide:build",
-    "commit:docs":
-      "git add -A && git commit -m 'docs: compile from src with `styleguidist`'",
+    "commit:docs": "git add -A && git commit -m 'docs: compile from src with `styleguidist`'",
     "prerelease": "npm run commit:lib && npm run commit:docs",
-    "release":
-      "standard-version -m 'chore(release): %s \n\n* CHANGELOG: https://github.com/tomchentw/react-prism/blob/v%s/CHANGELOG.md'"
+    "release": "standard-version -m 'chore(release): %s \n\n* CHANGELOG: https://github.com/tomchentw/react-prism/blob/v%s/CHANGELOG.md'"
   },
   "repository": {
     "type": "git",
