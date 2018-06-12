@@ -39,7 +39,7 @@ export default class PrismCode extends PureComponent {
       <Wrapper
         ref={this._handleRefMount}
         className={className}
-        key={typeof children === "array" ? children[0] : children}
+        key={children[0]}
       >
         {children}
       </Wrapper>
