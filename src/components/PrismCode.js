@@ -36,7 +36,11 @@ export default class PrismCode extends PureComponent {
     const { className, component: Wrapper, children } = this.props
 
     return (
-      <Wrapper ref={this._handleRefMount} className={className}>
+      <Wrapper
+        ref={this._handleRefMount}
+        className={className}
+        key={children[0]}
+      >
         {children}
       </Wrapper>
     )
